@@ -4,7 +4,7 @@ package Singleton;
  * 双重校验锁 线程安全
  */
 public class Singleton_doublecheck_safe {
-    private static Singleton_doublecheck_safe ourInstance;
+    private static volatile Singleton_doublecheck_safe ourInstance;
 
     public static Singleton_doublecheck_safe getInstance() {
         if(ourInstance==null){
